@@ -1,0 +1,4 @@
+1.SELECT idObiekt, nazwa, plik FROM obiekty;
+2.SELECT obiekty.plik, obiekty.nazwa, obiekty.nazwaCechy, obiekty.wartoscCechy, rodzaje.rodzaj FROM obiekty JOIN rodzaje ON obiekty.idRodzaj = rodzaje.idRodzaj WHERE obiekty.idRodzaj = 46;
+3.SELECT nazwa FROM obiekty WHERE idRodzaj = 10;
+4. SELECT rodzaje.rodzaj, COUNT(obiekty.idObiekt) AS "Liczba obiektów" FROM rodzaje JOIN obiekty ON rodzaje.idRodzaj = obiekty.idRodzaj GROUP BY rodzaje.rodzaj;
